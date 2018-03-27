@@ -1,12 +1,12 @@
 import React, {Component} from 'react'
-import SearchContainer from './containers/searchcontainer'
+import IssueContainer from './containers/issuecontainer'
 
 class App extends Component {
   render() {
     return (
       <div className="app">
         <h1>Github Issues Console</h1>
-        <SearchContainer />
+        <IssueContainer />
       </div>
     );
   }
