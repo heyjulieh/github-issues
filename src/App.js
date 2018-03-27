@@ -5,7 +5,7 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <h1>Github Issues Console</h1>
+        <h1>Bootstrap Github Issues Console</h1>
         <IssueContainer />
       </div>
     );
