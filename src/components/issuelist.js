@@ -16,7 +16,8 @@ class IssueList extends Component {
             number={issue.number}
             labels={issue.labels[0].color}
             milestone={issue.milestone}
-            comments={issue.comments}/>
+            comments={issue.comments}
+            created_at={issue.created_at}/>
   			)
       }
       if (issue.labels.length === 0) {
@@ -27,7 +28,8 @@ class IssueList extends Component {
           title={issue.title}
           number={issue.number}
           milestone={issue.milestone}
-          comments={issue.comments}/>
+          comments={issue.comments}
+          created_at={issue.created_at}/>
       }
 		});
 
