@@ -5,7 +5,7 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <h1>Bootstrap Github Issues Console</h1>
+        <h1><img className="bootstrapicon" src="https://seeklogo.com/images/B/bootstrap-logo-3C30FB2A16-seeklogo.com.png"/>Bootstrap Github Issues Console</h1>
         <IssueContainer />
       </div>
     );

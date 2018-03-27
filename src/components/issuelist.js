@@ -15,32 +15,35 @@ class IssueList extends Component {
   					title={issue.title}
             number={issue.number}
             labels={issue.labels[0].color}
-            milestone={issue.milestone}
+            state={issue.state}
             comments={issue.comments}
             created_at={issue.created_at}/>
   			)
       }
-      if (issue.labels.length === 0) {
-        <Issue
-          key={issue.id}
-          assignee={issue.assignee}
-          user={issue.user}
-          title={issue.title}
-          number={issue.number}
-          milestone={issue.milestone}
-          comments={issue.comments}
-          created_at={issue.created_at}/>
+      else {
+        return (
+          <Issue
+            key={issue.id}
+            assignee={issue.assignee}
+            user={issue.user}
+            title={issue.title}
+            number={issue.number}
+            labels='ffffff'
+            state={issue.state}
+            comments={issue.comments}
+            created_at={issue.created_at}/>
+        )
       }
 		});
 
 		return(
       <div className="wrapper">
         <div className="tableheader column a"></div>
-        <div className="tableheader column b">Author</div>
-        <div className="tableheader column c">Labels</div>
-        <div className="tableheader column d">Milestones</div>
-        <div className="tableheader column e">Assignee</div>
-        <div className="tableheader column f">Sort</div>
+        <div className="tableheader column b">Author <span className="glyphicon glyphicon-menu-down"></span></div>
+        <div className="tableheader column c">Labels <span className="glyphicon glyphicon-menu-down"></span></div>
+        <div className="tableheader column d">Status <span className="glyphicon glyphicon-menu-down"></span></div>
+        <div className="tableheader column e">Assignee <span className="glyphicon glyphicon-menu-down"></span></div>
+        <div className="tableheader column f">Sort <span className="glyphicon glyphicon-menu-down"></span></div>
         {issuesArray}
       </div>
 		)
