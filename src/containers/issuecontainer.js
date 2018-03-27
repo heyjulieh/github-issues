@@ -24,7 +24,6 @@ class IssueContainer extends Component {
 	}
 
 	render() {
-    console.log('issues are:', this.state.issues)
 		return(
 			<div>
 				<IssueList

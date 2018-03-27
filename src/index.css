@@ -17,16 +17,26 @@ h1 {
 }
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(6, minmax(50px, 1fr));
+  grid-template-columns: 3fr 1fr 1fr 1fr 1fr 1fr;
   background-color: #fff;
   width: 100vw;
 }
 .tablerow {
   grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: repeat(6, minmax(50px, 1fr));
+  grid-template-columns: 3fr 1fr 1fr 1fr 1fr 1fr;
   border-bottom: 1px solid grey;
-  font-weight: 300;
+}
+@media only screen and (max-width: 690px) {
+  .d, .e {
+    display: none;
+  }
+  .wrapper {
+    grid-template-columns: 4fr 1fr 1fr 1fr;
+  }
+  .tablerow {
+    grid-template-columns: 4fr 1fr 1fr 1fr;
+  }
 }
 .column {
   vertical-align: center;
@@ -35,6 +45,7 @@ h1 {
 .tableheader {
   background-color: #eee;
   text-transform: uppercase;
+  border-bottom: 3px solid darkgrey;
 }
 img {
   padding-bottom: 5px;
@@ -67,22 +78,35 @@ a {
 }
 a:hover {
   text-decoration: none;
-  color: lightgrey;
+  color: darkorange;
 }
 .titlelink {
   color: black;
 }
 .titlelink:hover {
-  color: darkgrey;
+  color: darkorange;
 }
 .b, .c, .d, .e, .f {
   text-align: center;
 }
 p {
+  font-weight: 400;
+  color: black;
   margin-bottom: 0;
 }
 .glyphicon {
   background-color: transparent;
   padding-left: 15px;
   padding-bottom: 3px;
+}
+
+.dropdown-menu p {
+  font-size: 10px;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  box-shadow: 0px 0px 0px;
+  -moz-box-shadow: 0px 0px 0px;
+  border-radius: 0;
 }
