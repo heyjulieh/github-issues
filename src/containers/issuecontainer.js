@@ -27,8 +27,7 @@ class IssueContainer extends Component {
 		return(
 			<div>
 				<IssueList
-					issues={this.state.issues}
-				/>
+					issues={this.state.issues}/>
 			</div>
 		)
 	}
