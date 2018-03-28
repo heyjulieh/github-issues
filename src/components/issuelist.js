@@ -63,27 +63,23 @@ class IssueList extends Component {
       <div className="wrapper">
         <div className="tableheader column a"></div>
         <div className="tableheader column b">
-          <ul className="nav navbar-nav">
             <li className="dropdown">
               <a className="dropdown-toggle" data-toggle="dropdown" href="#">Author <span className="glyphicon glyphicon-menu-down"></span></a>
               <ul className="dropdown-menu" id="authorUL">
                 {authorsArray}
               </ul>
             </li>
-          </ul>
         </div>
         <div className="tableheader column c">
-          <ul className="nav navbar-nav">
             <li className="dropdown">
               <a className="dropdown-toggle" data-toggle="dropdown" href="#">Label <span className="glyphicon glyphicon-menu-down"></span></a>
               <ul className="dropdown-menu" id="labelUL">
                 {labelsArray}
               </ul>
             </li>
-          </ul>
         </div>
-        <div className="tableheader column d"><a className="dropdown-toggle" href="#">Status</a></div>
-        <div className="tableheader column e"><a className="dropdown-toggle" href="#">Assignee</a></div>
+        <div className="tableheader column d">Status</div>
+        <div className="tableheader column e">Assignee</div>
         <div className="tableheader column f"><a className="dropdown-toggle" href="#">Sort <span className="glyphicon glyphicon-menu-down"></span></a></div>
         {issuesArray}
       </div>
