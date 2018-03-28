@@ -1,8 +1,13 @@
 import React, {Component} from 'react'
 import IssueContainer from './containers/issuecontainer'
+import IssueList from './components/issuelist'
 
 class App extends Component {
-  
+
+  searchAuthors(query){
+    console.log("Our App knows the query: " + query)
+  }
+
   render() {
     return (
       <div className="app">
