@@ -4,7 +4,7 @@ import React, {Component} from 'react'
 class Issue extends Component {
 
 	render() {
-	  let issueLink = `https://api.github.com/repos/twbs/bootstrap/issues/${this.props.number}`
+	  let issueLink = `https://github.com/twbs/bootstrap/pull/${this.props.number}`
 
     let now = new Date();
     let created_date = new Date(this.props.created_at)
