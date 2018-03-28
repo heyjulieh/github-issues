@@ -12,8 +12,7 @@ class Issue extends Component {
     let days = Math.floor(milli / 86400000);
     let hours = Math.floor(milli/3600000);
     let minutes = Math.floor(milli/60000);
-    if (days === 1)
-    {
+    if (days === 1) {
       return(
         <div style={{background: `#${this.props.labels}`}} className="tablerow">
           <div className="column a rowheader">
