@@ -3,6 +3,7 @@ import Issue from './issue'
 import Author from './author'
 import Label from './label'
 
+
 class IssueList extends Component {
 
 	render() {
@@ -48,8 +49,14 @@ class IssueList extends Component {
       if (issue.labels.length > 0){
   			return (
   				<Label
-            label={issue.labels}/>
+            labels={issue.labels[0].color}/>
   			)
+      }
+      else {
+        return (
+          <Label
+            labels='None'/>
+        )
       }
     });
 		return(
@@ -59,7 +66,7 @@ class IssueList extends Component {
           <ul className="nav navbar-nav">
             <li className="dropdown">
               <a className="dropdown-toggle" data-toggle="dropdown" href="#">Author <span className="glyphicon glyphicon-menu-down"></span></a>
-              <ul className="dropdown-menu">
+              <ul className="dropdown-menu" id="authorUL">
                 {authorsArray}
               </ul>
             </li>
@@ -69,15 +76,15 @@ class IssueList extends Component {
           <ul className="nav navbar-nav">
             <li className="dropdown">
               <a className="dropdown-toggle" data-toggle="dropdown" href="#">Label <span className="glyphicon glyphicon-menu-down"></span></a>
-              <ul className="dropdown-menu">
+              <ul className="dropdown-menu" id="labelUL">
                 {labelsArray}
               </ul>
             </li>
           </ul>
         </div>
-        <div className="tableheader column d">Status</div>
-        <div className="tableheader column e">Assignee</div>
-        <div className="tableheader column f">Sort <span className="glyphicon glyphicon-menu-down"></span></div>
+        <div className="tableheader column d"><a className="dropdown-toggle" href="#">Status</a></div>
+        <div className="tableheader column e"><a className="dropdown-toggle" href="#">Assignee</a></div>
+        <div className="tableheader column f"><a className="dropdown-toggle" href="#">Sort <span className="glyphicon glyphicon-menu-down"></span></a></div>
         {issuesArray}
       </div>
 		)

@@ -27,8 +27,11 @@ h1 {
   grid-template-columns: 3fr 1fr 1fr 1fr 1fr 1fr;
   border-bottom: 1px solid grey;
 }
+.b, .c, .d, .e, .f {
+  text-align: center;
+}
 @media only screen and (max-width: 690px) {
-  .d, .e {
+  div.d, div.e {
     display: none;
   }
   .wrapper {
@@ -46,6 +49,8 @@ h1 {
   background-color: #eee;
   text-transform: uppercase;
   border-bottom: 3px solid darkgrey;
+  padding: 0px;
+  margin: 0;
 }
 img {
   padding-bottom: 5px;
@@ -86,9 +91,7 @@ a:hover {
 .titlelink:hover {
   color: darkorange;
 }
-.b, .c, .d, .e, .f {
-  text-align: center;
-}
+
 p {
   font-weight: 400;
   color: black;
@@ -97,16 +100,25 @@ p {
 .glyphicon {
   background-color: transparent;
   padding-left: 15px;
-  padding-bottom: 3px;
 }
 
 .dropdown-menu p {
   font-size: 10px;
   display: inline-block;
 }
-
 .dropdown-menu {
   box-shadow: 0px 0px 0px;
   -moz-box-shadow: 0px 0px 0px;
   border-radius: 0;
+}
+a.dropdown-toggle {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+a.dropdown-toggle, a.dropdown-toggle:visited, a.dropdown-toggle:focus, a.dropdown-toggle:active {
+  color: black
+}
+
+a.dropdown-toggle:hover {
+  color: darkorange
 }

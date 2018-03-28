@@ -3,14 +3,11 @@ import React, {Component} from 'react'
 
 class Label extends Component {
 
+
 	render() {
-    {
-      return(
-        <div class="container-fluid">
-          <img class="label" src={this.props.labels} alt="label"/> <p>{this.props.labels}</p>
-        </div>
-      )
-    }
+    return(
+      <li style={{background: `#${this.props.labels}`}} id={this.props.labels} className="container-fluid"><p>{this.props.labels}</p></li>
+    )
 	}
 }
 

@@ -6,12 +6,12 @@ class Issue extends Component {
 	render() {
 	  let issueLink = `https://api.github.com/repos/twbs/bootstrap/issues/${this.props.number}`
 
-    var now = new Date();
-    var created_date = new Date(this.props.created_at)
-    var milli = (now - created_date);
-    var days = Math.floor(milli / 86400000);
-    var hours = Math.floor(milli/3600000);
-    var minutes = Math.floor(milli/60000);
+    let now = new Date();
+    let created_date = new Date(this.props.created_at)
+    let milli = (now - created_date);
+    let days = Math.floor(milli / 86400000);
+    let hours = Math.floor(milli/3600000);
+    let minutes = Math.floor(milli/60000);
     if (days === 1)
     {
       return(
