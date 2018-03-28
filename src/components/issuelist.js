@@ -10,14 +10,19 @@ class IssueList extends Component {
     super();
     this.state = {
       searchAuthor: '',
-      searchLabel: ''
+      searchLabel: '',
     };
   }
   updateAuthorSearch(event) {
     this.setState({searchAuthor: event.target.value})
+    // let author = $(this).closest('p').prevObject[0].props.user.login
+    // console.log('author is: ', author)
+    // this.setState({searchAuthor: author})
   }
   updateLabelSearch(event) {
     this.setState({searchLabel: event.target.value})
+    // let label = $(this).closest('p').prevObject[0].props.labels[0].color
+    // this.setState({searchLabel: label})
   }
 
 	render() {
@@ -137,6 +142,7 @@ class IssueList extends Component {
               <a className="dropdown-toggle" data-toggle="dropdown" href="#">Author <span className="glyphicon glyphicon-menu-down"></span></a>
               <ul className="dropdown-menu" id="authorUL">
                 <input type="text"
+                        placeholder="search"
                         value={this.state.searchAuthor}
                         onChange={this.updateAuthorSearch.bind(this)}/>
                 {authorsArray}
@@ -148,6 +154,7 @@ class IssueList extends Component {
                 <a className="dropdown-toggle" data-toggle="dropdown" href="#">Label <span className="glyphicon glyphicon-menu-down"></span></a>
                 <ul className="dropdown-menu" id="labelUL">
                 <input type="text"
+                        placeholder="search"
                         value={this.state.searchLabel}
                         onChange={this.updateLabelSearch.bind(this)}/>
                   {labelsArray}
@@ -170,6 +177,7 @@ class IssueList extends Component {
               <a className="dropdown-toggle" data-toggle="dropdown" href="#">Author <span className="glyphicon glyphicon-menu-down"></span></a>
               <ul className="dropdown-menu" id="authorUL">
                 <input type="text"
+                        placeholder="search"
                         value={this.state.searchAuthor}
                         onChange={this.updateAuthorSearch.bind(this)}/>
                 {authorsArray}
@@ -181,6 +189,7 @@ class IssueList extends Component {
                 <a className="dropdown-toggle" data-toggle="dropdown" href="#">Label <span className="glyphicon glyphicon-menu-down"></span></a>
                 <ul className="dropdown-menu" id="labelUL">
                 <input type="text"
+                        placeholder="search"
                         value={this.state.searchLabel}
                         onChange={this.updateLabelSearch.bind(this)}/>
                   {labelsArray}
