@@ -5,7 +5,6 @@ import $ from 'jquery-ajax'
 class Author extends Component {
 
 	render() {
-    console.log('props are: ', this.props)
     return(
       <li id={this.props.user.id} className="container-fluid">
         <img className="userimg" src={this.props.user.avatar_url} alt="user"/> <p className="user">{this.props.user.login}</p>

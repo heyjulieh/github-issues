@@ -16,7 +16,6 @@ class IssueList extends Component {
   updateAuthorSearch(event) {
     this.setState({searchAuthor: event.target.value})
     // let author = $(this).closest('p').prevObject[0].props.user.login
-    // console.log('author is: ', author)
     // this.setState({searchAuthor: author})
   }
   updateLabelSearch(event) {
